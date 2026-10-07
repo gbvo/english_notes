@@ -7,7 +7,7 @@ tags: [vocabulary]
 
 - 原文
 
-    - And in doing so, Najya and her tight trio of Black girl nerds **confronted** not only the reality of the city's deeply segregated educational landscape but also ...在这个过程中，娜吉娅和她那两个关系亲密、同样爱读书的黑人女孩朋友，不仅直面了这座城市教育格局严重种族隔离的现实，也...
+    - And in doing so, Najya and her tight trio of Black girl nerds **confronted** not only the reality of the city's deeply segregated educational landscape but also ... 在这个过程中，娜吉娅和她那两个关系亲密、同样爱读书的黑人女孩朋友，不仅直面了这座城市教育格局严重种族隔离的现实，也直面了...
 
 - 词义
 
