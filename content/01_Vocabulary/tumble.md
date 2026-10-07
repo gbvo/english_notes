@@ -7,7 +7,7 @@ tags: [vocabulary]
 
 - 原文
 
-    - she'd tumble into the car and ... 她会一股脑儿地钻进车里 / 风风火火地上车 / 扑进车里
+    - she'd **tumble** into the car and ... 她会一股脑儿地钻进车里 / 风风火火地上车 / 扑进车里
 
 - 词义
 

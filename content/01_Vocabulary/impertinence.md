@@ -7,7 +7,7 @@ tags: [vocabulary]
 
 - 原文
 
-    - Her body slung in adolescent **impertinence** against the front passenger seat door, shoulders turned so she could face me fully. 她整个人带着青春期特有的桀骜劲儿，懒散地歪靠在副驾驶座的车门上，肩膀转了过来，好让自己能够正对着我。
+    - Her body [[sling | slung]] in adolescent **impertinence** against the front passenger seat door, shoulders turned so she could face me fully. 她整个人带着青春期特有的桀骜劲儿，懒散地歪靠在副驾驶座的车门上，肩膀转了过来，好让自己能够正对着我。
 
 
 - 词义

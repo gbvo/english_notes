@@ -17,4 +17,4 @@ tags: [vocabulary]
 
         - bombard someone with messages：给某人发大量消息 / 消息轰炸
 
-    - 原文中的 bombard me with the day's escapades 指她一股脑儿地向我讲述当天的调皮趣事，突出话多、说得急。
+    - 原文中的 bombard me with the day's [[escapade | escapades]] 指她一股脑儿地向我讲述当天的调皮趣事，突出话多、说得急。

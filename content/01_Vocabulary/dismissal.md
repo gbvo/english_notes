@@ -7,7 +7,7 @@ tags: [vocabulary]
 
 - 原文
 
-    - By **dismissal** time, Najya's shock had turned to boiling, and the seatbelt had barely clicked before she was confronting me. 到放学时，娜吉娅已从震惊变得怒火中烧，安全带才刚咔哒一声扣上，她就开始质问我。
+    - By **dismissal** time, Najya's shock had turned to boiling, and the seatbelt had barely clicked before she was [[confront | confronting]] me. 到放学时，娜吉娅已从震惊变得怒火中烧，安全带才刚咔哒一声扣上，她就开始质问我。
 
 - 词义
 

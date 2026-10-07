@@ -7,7 +7,7 @@ tags: [vocabulary]
 
 - 原文
 
-    - she'd tumble into the car and bombard me with the day's **escapades**. 她会一头钻进车里，连珠炮似的向我讲述当天的种种调皮趣事。
+    - she'd tumble into the car and [[bombard]] me with the day's **escapades**. 她会一头钻进车里，连珠炮似的向我讲述当天的种种调皮趣事。
 
 - 词义
 
