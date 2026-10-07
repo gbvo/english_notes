@@ -1,3 +1,10 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+html:root {
+  /* 正文：优先 Noto Serif，缺少的字形再使用文楷 */
+  --bodyFont: "Noto Serif", "LXGW WenKai Mono TC", serif;
+
+  /* 同时覆盖插件提供给 Obsidian 风格主题的正文变量 */
+  --font-text: var(--bodyFont);
+}
