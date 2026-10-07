@@ -7,7 +7,7 @@ tags: [expressions]
 
 - 原文
 
-    - My hands tightened on the steering wheel as I worked to keep my face neutral, **buying a few moments** to gather my thoughts. 我握着方向盘的手不由得收紧，努力让脸上不显露情绪，借此给自己争取片刻时间，好整理一下思绪。
+    - My hands tightened on the steering wheel as I worked to keep my face [[neutral]], **buying a few moments** to gather my thoughts. 我握着方向盘的手不由得收紧，努力让脸上不显露情绪，借此给自己争取片刻时间，好整理一下思绪。
 
 - 表达含义
 
