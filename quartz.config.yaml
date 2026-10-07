@@ -103,7 +103,7 @@ plugins:
     options:
       useThemeFonts: false
       fontOrigin: googleFonts
-      header: Noto Serif
+      header: Inter
       body: LXGW WenKai Mono TC
       code: IBM Plex Mono
   - source: "@quartz-themes/core"
