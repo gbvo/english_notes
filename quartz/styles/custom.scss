@@ -1,10 +1,512 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
 html:root {
-  /* 正文：优先 Inter，缺少的字形再使用文楷 */
   --bodyFont: "Inter", "LXGW WenKai Mono TC", serif;
-
-  /* 同时覆盖插件提供给 Obsidian 风格主题的正文变量 */
   --font-text: var(--bodyFont);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page[data-frame="default"] {
+  max-width: 1180px;
+
+  > #quartz-body {
+    grid-template-columns: 240px minmax(0, 820px);
+    grid-template-areas:
+      "grid-sidebar-left grid-header"
+      "grid-sidebar-left grid-center"
+      "grid-sidebar-left grid-footer";
+    column-gap: 2rem;
+    padding: 0 2rem;
+
+    .sidebar.left {
+      padding: 3.5rem 1rem 2rem 0;
+      gap: 1.5rem;
+    }
+    .sidebar.right {
+      display: none;
+    }
+    .page-header {
+      margin-top: 3.5rem;
+    }
+    .center {
+      min-width: 0;
+      width: 100%;
+    }
+    .page-title {
+      font-size: 1.35rem;
+      letter-spacing: -0.04em;
+    }
+    .article-title {
+      margin-top: 0;
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      letter-spacing: -0.04em;
+      line-height: 1.2;
+    }
+    footer {
+      margin-top: 2.5rem;
+      padding-bottom: 2rem;
+    }
+
+    @media all and ($mobile) {
+      display: block;
+      padding: 0 1.25rem;
+      .sidebar.left {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1.5rem 0 0;
+        gap: 0.8rem;
+        height: auto;
+      }
+      .page-title {
+        margin: 0;
+      }
+      .page-header {
+        margin-top: 2rem;
+      }
+      .sidebar.left > .spacer {
+        display: none;
+      }
+    }
+  }
+}
+
+.learning-eyebrow {
+  font-family: var(--headerFont);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  color: var(--secondary);
+}
+.learning-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  > .learning-eyebrow {
+    margin: 0.75rem 0 0.65rem 0.75rem;
+  }
+  > a.internal {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 0.75rem;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--darkgray);
+    span {
+      color: var(--gray);
+      font-family: var(--headerFont);
+      font-size: 0.8rem;
+    }
+    &:hover,
+    &[aria-current="page"] {
+      background: var(--highlight);
+      color: var(--secondary);
+    }
+    &[aria-current="page"] {
+      font-weight: 600;
+    }
+  }
+  .learning-nav-caption {
+    margin: 1.5rem 0 0 0.75rem;
+    color: var(--gray);
+    font-size: 0.75rem;
+  }
+  @media all and ($mobile) {
+    width: 100%;
+    flex-direction: row;
+    gap: 0.3rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--lightgray);
+    > .learning-eyebrow,
+    .learning-nav-caption {
+      display: none;
+    }
+    > a.internal {
+      flex: 1;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.65rem 0.35rem;
+      font-size: 0.85rem;
+    }
+    > a:first-of-type span {
+      display: none;
+    }
+  }
+}
+
+.learning-intro p {
+  margin: 0.85rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--darkgray);
+}
+.center:has(.learning-dashboard) > hr {
+  display: none;
+}
+.center:has(.learning-dashboard) .page-footer {
+  margin-top: 1.75rem;
+}
+.learning-dashboard {
+  [hidden] {
+    display: none !important;
+  }
+  input,
+  select,
+  button {
+    font: inherit;
+    color: var(--darkgray);
+  }
+  input,
+  select {
+    box-sizing: border-box;
+    min-width: 0;
+    background: var(--light);
+    border: 1px solid var(--lightgray);
+    border-radius: 8px;
+    padding: 0.75rem 0.85rem;
+    font-size: 0.9rem;
+  }
+  input::placeholder {
+    color: var(--gray);
+  }
+  button {
+    cursor: pointer;
+    border: 1px solid var(--lightgray);
+    border-radius: 7px;
+    background: transparent;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+  button:hover:not(:disabled) {
+    color: var(--secondary);
+    background: var(--highlight);
+  }
+  button:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+:where(.learning-dashboard, .learning-nav, .learning-summary)
+  :is(a, button, input, select):focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+}
+.learning-home-search {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  input {
+    flex: 1;
+    width: 100%;
+    padding: 1rem;
+  }
+  button {
+    background: var(--secondary);
+    color: var(--light);
+    border-color: var(--secondary);
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+  }
+  button:hover:not(:disabled) {
+    background: var(--secondary);
+    color: var(--light);
+    filter: brightness(1.1);
+  }
+  button span {
+    margin-left: 0.5rem;
+  }
+}
+.learning-categories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  a.learning-category {
+    display: block;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--highlight), transparent);
+    border: 1px solid var(--lightgray);
+    border-radius: 12px;
+    line-height: 1.6;
+    transition: border-color 0.2s ease;
+    &:hover {
+      border-color: var(--secondary);
+    }
+    h2 {
+      margin: 1.3rem 0 0.35rem;
+      font-size: 1.6rem;
+      color: var(--dark);
+    }
+    p {
+      margin: 0;
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+  }
+  .learning-category-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .learning-category-count {
+    display: block;
+    margin-top: 1.5rem;
+    color: var(--secondary);
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
+.learning-topics,
+.learning-recent {
+  margin-top: 2.5rem;
+}
+.learning-dashboard h2,
+.learning-related h2 {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+.learning-topic-chips,
+.learning-note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  a.internal {
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--lightgray);
+    background: transparent;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+  a:hover {
+    border-color: var(--secondary);
+  }
+  span {
+    margin-left: 0.75rem;
+    color: var(--gray);
+    font-family: var(--headerFont);
+  }
+}
+.learning-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.learning-section-heading > a.internal {
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.learning-rows {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  > li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--lightgray);
+    margin: 0;
+  }
+  > li:first-child {
+    border-top: 1px solid var(--lightgray);
+  }
+  a.learning-note-link {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.9fr) minmax(0, 1.4fr);
+    align-items: baseline;
+    flex: 1;
+    min-width: 0;
+    gap: 1rem;
+    background: transparent;
+    border-radius: 0;
+    padding: 1rem 0;
+    line-height: 1.65;
+    font-weight: 400;
+  }
+  .learning-word {
+    color: var(--secondary);
+    font-family: var(--headerFont);
+    font-size: 0.95rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+  .learning-meaning {
+    color: var(--darkgray);
+    font-size: 0.85rem;
+  }
+  .learning-note-kind {
+    color: var(--gray);
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+  > li:hover {
+    background: var(--highlight);
+  }
+}
+.learning-filter-row {
+  display: flex;
+  gap: 0.6rem;
+  .learning-query-label {
+    flex: 1;
+    min-width: 0;
+  }
+  input {
+    width: 100%;
+  }
+  select {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+.learning-alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin: 1.2rem 0;
+  button {
+    border: 0;
+    padding: 0.4rem 0.45rem;
+    min-width: 1.6rem;
+    font-family: var(--headerFont);
+    font-size: 0.8rem;
+  }
+  button[aria-pressed="true"] {
+    background: var(--secondary);
+    color: var(--light);
+  }
+}
+.learning-catalogue-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0 0.65rem;
+}
+.learning-catalogue-status p {
+  color: var(--gray);
+  font-size: 0.8rem;
+  margin: 0;
+}
+.learning-catalogue-status button {
+  padding: 0.25rem 0;
+  border: 0;
+  color: var(--secondary);
+}
+.learning-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.learning-pagination span {
+  font-family: var(--headerFont);
+  font-size: 0.85rem;
+}
+.learning-empty {
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border: 1px dashed var(--lightgray);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.learning-summary {
+  margin: 1rem 0 2rem;
+  > p {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+.learning-related {
+  margin-top: 1.5rem;
+}
+.learning-related > .learning-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+article.learning-note {
+  line-height: 1.9;
+  h2 {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  blockquote {
+    margin: 1rem 0;
+    padding: 0.15rem 1.2rem;
+    border-left: 3px solid var(--tertiary);
+    background: var(--highlight);
+    border-radius: 0 8px 8px 0;
+  }
+  blockquote p {
+    color: var(--dark);
+  }
+  blockquote + p {
+    font-size: 0.9rem;
+    color: var(--darkgray);
+  }
+  li {
+    margin: 0.5rem 0;
+  }
+}
+@media all and ($mobile) {
+  .learning-home-search {
+    flex-wrap: wrap;
+  }
+  .learning-home-search input {
+    flex-basis: 100%;
+  }
+  .learning-home-search button {
+    width: 100%;
+  }
+  .learning-categories a.learning-category {
+    padding: 1rem;
+  }
+  .learning-category-top .learning-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+  }
+  .learning-filter-row {
+    flex-wrap: wrap;
+  }
+  .learning-filter-row .learning-query-label {
+    flex-basis: 100%;
+  }
+  .learning-filter-row > label:not(.learning-query-label) {
+    flex: 1;
+  }
+  .learning-filter-row select {
+    width: 100%;
+  }
+  .learning-rows a.learning-note-link {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding: 0.85rem 0;
+  }
+  .learning-note-kind {
+    align-self: flex-start;
+    padding-top: 1rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .learning-dashboard a {
+    transition: none;
+  }
 }
