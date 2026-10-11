@@ -47,6 +47,9 @@ html:root {
       font-size: 1.35rem;
       letter-spacing: -0.04em;
     }
+    .breadcrumb-container {
+      margin-bottom: 0.5rem;
+    }
     .article-title {
       margin-top: 0;
       font-size: clamp(2rem, 4vw, 2.75rem);

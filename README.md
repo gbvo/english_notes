@@ -1,4 +1,4 @@
-# English Notes
+# 词间漫步
 
 基于 Quartz v5 的英语阅读笔记：[在线访问](https://gbvo.github.io/english_notes/)。
 
