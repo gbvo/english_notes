@@ -8,9 +8,9 @@ cssclasses: [learning-note]
 
 ## 原文
 
-> she'd **tumble** into the car and ...
+> She'd **tumble** into the car and [[bombard]] me with the day's [[escapade | escapades]].
 
-她会一股脑儿地钻进车里 / 风风火火地上车 / 扑进车里
+她会一头钻进车里，连珠炮似地向我讲述当天的种种调皮趣事。
 
 ## 词义
 
@@ -30,4 +30,4 @@ tumble 作动词，基本意思是“跌倒、滚落、翻滚”，常带有失�
 
 - She took a tumble on the ice. 她在冰上摔了一跤。
 
-原文中的 tumble into the car 是在描写她上车时匆忙、带点莽撞的动作，可以理解为“一股脑儿地钻进车里”或“风风火火地上车”，不必理解为真的摔进车里。she'd 在这里是 she would 的缩写，表示过去经常如此。
+原文中的 tumble into the car 是在描写她上车时匆忙、带点莽撞的动作，可以理解为“一股脑儿地钻进车里”，不必理解为真的摔进车里。she'd 在这里是 she would 的缩写，表示过去经常如此。
