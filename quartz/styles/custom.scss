@@ -1,7 +1,7 @@
 @use "./variables.scss" as *;
 
 html:root {
-  --bodyFont: "Inter", "LXGW WenKai Mono TC", serif;
+  --bodyFont: "Literata", "Noto Serif", serif;
   --font-text: var(--bodyFont);
 }
 
@@ -459,7 +459,7 @@ article.learning-note {
     color: var(--dark);
   }
   blockquote + p {
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     color: var(--darkgray);
   }
   li {

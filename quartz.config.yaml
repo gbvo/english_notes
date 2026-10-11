@@ -103,8 +103,9 @@ plugins:
     options:
       useThemeFonts: false
       fontOrigin: googleFonts
+      title: Literata
       header: Inter
-      body: LXGW WenKai Mono TC
+      body: Noto Serif
       code: IBM Plex Mono
   - source: "@quartz-themes/core"
     enabled: false
