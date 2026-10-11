@@ -8,7 +8,7 @@ cssclasses: [learning-note]
 
 ## 原文
 
-> This segregation exists because policymakers and affluent parents — even those who **profess** a belief in integration and equality — shed their [[advocacy]] at the schoolhouse door and refuse to take or support any substantial action to integrate the city’s schools.
+> This segregation exists because policymakers and affluent parents — even those who **profess** a belief in integration and equality — shed their [[advocacy]] at the schoolhouse door and refuse to take or support any substantial action to integrate the city's schools.
 
 这种种族隔离之所以存在，是因为政策制定者和富裕家长——即便是那些声称信奉种族融合与平等的人——一到学校门口就把这些主张抛在脑后，拒绝采取或支持任何推动该市学校种族融合的实质性行动。
 
