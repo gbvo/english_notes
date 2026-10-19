@@ -161,9 +161,7 @@ export const LearningDashboard: QuartzComponent = (props) => {
             name="q"
             placeholder="搜索单词、表达或中文释义…"
           />
-          <button type="submit">
-            查找笔记 <span aria-hidden="true">↗</span>
-          </button>
+          <button type="submit">查找笔记</button>
         </form>
         <div class="learning-categories">
           {categories.map((category, i) => (
@@ -172,7 +170,6 @@ export const LearningDashboard: QuartzComponent = (props) => {
                 <span class="learning-eyebrow">
                   0{i + 1} / {category.english}
                 </span>
-                <span aria-hidden="true">↗</span>
               </div>
               <h2>{category.title}</h2>
               <p>{category.label}</p>
